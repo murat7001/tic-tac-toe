@@ -77,7 +77,7 @@ function cpu(cpuPlayer){
         }
 
         cpuPlayer=="O" ? winner("X") : winner("O");
-        }, 500);
+        }, 1000);
     }
 }
 
