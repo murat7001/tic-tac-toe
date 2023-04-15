@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* general */
+body{
+    background-color: #ffe6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.btn{
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 16px;
+    color: #ff3333;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn:hover{
+    transform: translatey(5px);
+}
+
+.container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: #ff8080;
+}
+
+.head-title{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+
+
+/* select-area */
+
+.select-area{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.select-area.loaded{
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.select-area p{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.select-area .btns{
+    display: flex;
+    column-gap: 20px;
+    margin-top: 20px;
+}
+
+/* game-area */
+
+.game-area{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.game-area.loaded{
+    opacity: 1;
+    z-index: 1;
+}
+
+.game-area .header .turn{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.game-area .contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin-top: 16px;
+}
+
+.game-area .contain .row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.game-area .contain .row .squares{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 8px;
+    margin:12px 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.game-area.active .squares{
+    pointer-events: none;
+}
+
+/* result-area */
+
+.result-area{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.result-area.loaded{
+    opacity: 1;
+    z-index: 1;
+}
+
+.result-area p{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+.result-area .btn{
+    margin-top: 40px;
+    font-weight: 600;
+}
